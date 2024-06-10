@@ -11,13 +11,19 @@ Esta API permite criar, atualizar, listar, visualizar e excluir usuários. Ela u
     git clone https://github.com/CarlosHenriqueWebdev/programador-junior-backend-teste-tecnico.git
     ```
 
-3. Instale as dependências do projeto usando o comando:
+3. Navegue até a pasta do projeto:
+
+    ```bash
+    cd ./teste-tecnico
+    ```
+
+4. Instale as dependências do projeto usando o comando:
 
     ```bash
     npm install
     ```
 
-4. (opcional) Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
+5. (opcional) Crie um arquivo `.env` na raiz do projeto e adicione as seguintes variáveis:
 
     ```plaintext
     PORT=3000
@@ -75,7 +81,7 @@ Esta API permite criar, atualizar, listar, visualizar e excluir usuários. Ela u
 
 - `GET http://localhost:3000/users/<seu-id>`: Retorna um usuário específico. Se não houver nenhum usuário, mostra um erro. É necessário colocar o ID do usuário na URL primeiro. Para iniciar, basta apenas colocar a rota GET com o ID e enviar. Se o ID estiver incorreto, dá um erro.
 
-- `PUT http://localhost:3000/users/<seu-id>`: Atualiza as informações de um usuário existente. Atualmente, é possível trocar apenas as informações de um campo. Informações existentes não serão alteradas. Exemplo:
+- `PUT http://localhost:3000/users/<seu-id>`: Atualiza as informações de um usuário existente. Atualmente, é possível trocar apenas as informações de um campo, mais também é possivel trocar as informações de todos os campos ao mesmo tempo. Informações existentes não serão alteradas no processo caso haja um campo faltando. Exemplo:
 
     ```json
     {
@@ -83,7 +89,7 @@ Esta API permite criar, atualizar, listar, visualizar e excluir usuários. Ela u
     }
     ```
 
-   Continua como:
+   Continua automáticamente como:
 
     ```json
     {
